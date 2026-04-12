@@ -50,7 +50,7 @@ export default function Projects() {
         viewport={{ once: true, amount: 0.2 }}
         variants={containerVariants}
       >
-        <h2 className="neon-text" style={{ fontSize: '3rem', marginBottom: '3rem', textAlign: 'center' }}>Projetos em Destaque</h2>
+        <h2 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '3rem', textAlign: 'center' }}>Projetos em Destaque</h2>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           {projects.map((project, idx) => (
@@ -72,7 +72,7 @@ export default function Projects() {
               
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {project.tags.map(tag => (
-                  <span key={tag} style={{ fontSize: '0.8rem', padding: '0.2rem 0.8rem', backgroundColor: 'rgba(57, 255, 20, 0.1)', color: 'var(--neon-green)', borderRadius: '20px', border: '1px solid rgba(57, 255, 20, 0.3)' }}>
+                  <span key={tag} style={{ fontSize: '0.8rem', padding: '0.2rem 0.8rem', backgroundColor: 'rgba(20, 149, 255, 0.25)', color: 'var(--neon-green)', borderRadius: '20px', border: '1px solid rgba(20, 24, 255, 0.3)' }}>
                     {tag}
                   </span>
                 ))}
