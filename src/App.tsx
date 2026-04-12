@@ -20,7 +20,7 @@ function App() {
           >
             <div className="profile-container">
               <img 
-                src={fotoPerfil}
+                src={fotoPerfil.src}
                 alt="Wylamys Santos" 
                 className="profile-img"
               />

@@ -15,7 +15,7 @@ export default function Contact() {
         className="glass"
         style={{ padding: '3rem', textAlign: 'center' }}
       >
-        <h2 className="neon-text" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Vamos Construir o Futuro?</h2>
+        <h2 className="text-gradient" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Vamos Construir o Futuro?</h2>
         <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
           Estou disponível para novos projetos e oportunidades. Sinta-se à vontade para me mandar uma mensagem.
         </p>
@@ -46,7 +46,7 @@ export default function Contact() {
             }} 
           />
           <motion.button 
-            whileHover={{ scale: 1.02, backgroundColor: 'rgba(57, 255, 20, 0.2)' }}
+            whileHover={{ scale: 1.02, backgroundColor: 'rgba(20, 200, 255, 0.24)' }}
             whileTap={{ scale: 0.98 }}
             style={{
               padding: '1rem', borderRadius: '8px', border: '1px solid var(--neon-green)',
