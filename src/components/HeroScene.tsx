@@ -22,10 +22,15 @@ export default function HeroScene() {
         top: 0,
         left: 0,
         zIndex: 0,
-        pointerEvents: isTouchDevice ? 'none' : 'auto',
+        touchAction: 'pan-y',
       }}
     >
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        onCreated={({ gl }) => {
+          gl.domElement.style.touchAction = 'pan-y';
+        }}
+      >
         <color attach="background" args={['#050505']} />
         
         {/* Céu Estrelado Imersivo */}
@@ -40,13 +45,14 @@ export default function HeroScene() {
         />
 
         {/* Permite que o usuário olhe ao redor, tornando "viciante" e interativo */}
-        <OrbitControls 
-          enabled={!isTouchDevice}
-          enableZoom={false} 
-          enablePan={false} 
-          autoRotate 
-          autoRotateSpeed={0.5} 
-        />
+        {!isTouchDevice && (
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            autoRotate
+            autoRotateSpeed={0.5}
+          />
+        )}
       </Canvas>
     </div>
   );
