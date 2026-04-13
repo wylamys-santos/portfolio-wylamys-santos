@@ -45,7 +45,7 @@ export default function AboutSkills() {
               Acredito que o código transcende a tela quando combinado com design excepcional e performance afiada.
             </p>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
-              Foco no desenvolvimento Front-end avançado manipulando tecnologias como React, manipulações 3D no navegador e arquitetura performática com Node.js no backend.
+              
             </p>
           </motion.div>
 

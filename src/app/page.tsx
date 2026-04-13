@@ -14,14 +14,29 @@ export default function Home() {
       {/* 3D Background / Hero */}
       <section style={{ height: '100vh', width: '100vw', position: 'relative' }}>
         <HeroScene />
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+        <div className="hero-shell">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            style={{ marginBottom: '2rem' }}
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="hero-copy"
           >
-            <div className="profile-container">
+            <span className="hero-kicker">Olá, eu sou</span>
+            <h1 className="text-gradient hero-title">Wylamys Santos</h1>
+            <h3 className="hero-subtitle">Desenvolvedor Front-end</h3>
+            <p className="hero-description">
+              Construo interfaces modernas com foco em experiência, performance e presença visual.
+              Este portfolio reúne projetos interativos, animações e aplicações com identidade própria.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.82, x: 60 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.15 }}
+            className="hero-visual"
+          >
+            <div className="profile-container profile-container-lg">
               <Image
                 src={fotoPerfil}
                 alt="Wylamys Santos"
@@ -29,16 +44,6 @@ export default function Home() {
                 priority
               />
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <h2 className="text-gradient" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Olá, eu sou</h2>
-            <h1 className="text-gradient" style={{ fontSize: '4.5rem', margin: 0, lineHeight: 1.1 }}>Wylamys Santos</h1>
-            <h3 style={{ fontSize: '2rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Desenvolvedor Front-end</h3>
           </motion.div>
         </div>
       </section>
