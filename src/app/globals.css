@@ -152,6 +152,27 @@ body {
   filter: saturate(1.04) contrast(1.03);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-card {
+  min-height: 100%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-card {
+  min-height: 155px;
+}
+
 @media (max-width: 900px) {
   .hero-shell {
     width: min(100%, calc(100% - 2rem));
@@ -182,5 +203,20 @@ body {
     width: clamp(220px, 54vw, 300px);
     height: clamp(290px, 68vw, 390px);
     outline-offset: 8px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-card {
+    min-height: 140px;
+    padding: 1.1rem !important;
   }
 }

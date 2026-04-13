@@ -37,26 +37,23 @@ export default function AboutSkills() {
       >
         <h2 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '2rem' }}>Sobre Mim & Habilidades</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="about-layout">
           {/* Texto Sobre */}
-          <motion.div variants={itemVariants} className="glass" style={{ padding: '2rem' }}>
-            <p style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
+          <motion.div variants={itemVariants} className="glass about-card" style={{ padding: '2rem' }}>
+            <p style={{ fontSize: '1.2rem', color: 'var(--text-main)' }}>
               Sou um desenvolvedor apaixonado por criar experiências interativas, rápidas e imersivas. 
               Acredito que o código transcende a tela quando combinado com design excepcional e performance afiada.
-            </p>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
-              
             </p>
           </motion.div>
 
           {/* Grid de Skills */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1.5rem' }}>
+          <div className="skills-grid">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, y: -5, boxShadow: 'var(--glass-glow)' }}
-                className="glass"
+                className="glass skill-card"
                 style={{
                   padding: '1.5rem',
                   display: 'flex',
